@@ -1,7 +1,9 @@
+import discord
 import requests
+import os
 from bs4 import BeautifulSoup
 
-client = discord.Client('NzA4MjQ5ODUwNzg0OTA3Mjk0.XrUnOQ.ZgQz2M9f5m6i4sSj36mEDr_2v8E')
+client = discord.Client()
 Name = "qxt"
 
 hdr = {'Accept-Language': 'ko_KR,en;q=0.8', 'User-Agent': (
@@ -77,4 +79,5 @@ def printSummonerInfo(Container):
 if __name__ == "__main__":
 
     printSummonerInfo(parseOPGG(""))  
+    access_token = os.environ["BOT_TOKEN"]
     client.run('token')              
